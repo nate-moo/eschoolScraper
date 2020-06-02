@@ -5,8 +5,8 @@ An eschool scraper by ME!
 it'll just make it easier ig
 
 # Installation:
-click `clone or download`
-click `Download as ZIP`
-make sure python 3 is installed
-edit the main.py file with your credentials
-double click main.py to run
+click `clone or download` \n
+click `Download as ZIP` \n
+make sure python 3 is installed \n
+edit the main.py file with your credentials\n
+double click main.py to run \n
