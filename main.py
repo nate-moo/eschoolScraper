@@ -1,11 +1,13 @@
 from bs4 import BeautifulSoup
 import requests
-import logging
 import os
 from tabulate import tabulate
-import json
 import time
 
+## Notes ##
+# If there is a space before typing that is a comment for explaination
+#print("If there isn't a space before, that is commented out code")
+# you can read the commented out code but most of it is just for debugging errors and other stuff
 
 ###############################
 
@@ -44,13 +46,14 @@ soup = BeautifulSoup(r.text, features="html.parser")
 # Printing out the website data for debugging
 usrName = soup.find("input", {"type":"password"})
 psswd = soup.find("input", {"type":"text"})
+# Wat?
+
 VerificationToken = soup.find("input", {"name":"__RequestVerificationToken"}).get("value")
+# This grabs the Verification code for the signin. No idea why this is now a thing but cool ig
 
 #print(VerificationToken)
 
 #exit()
-
-# Wat?
 
 payload = {
     "__RequestVerificationToken" : VerificationToken,
@@ -103,6 +106,7 @@ soup = BeautifulSoup(GradesLocation.text, features="html.parser")
 
 classes = soup.find_all("a", {"class":"sg-header-heading"})
 # Finds Classes Names
+
 averages = soup.find_all("span", {"class":"sg-header-heading sg-right"})
 # Finds Grades for the class
 
@@ -119,9 +123,10 @@ print('\n')
 print(username, "'s grades:")
 
 print(tabulate(mixed, headers=["class", "grade"], tablefmt="pretty", colalign=("left",)))
-# Prints out a nice table full of your data! now to sell it to facebook 
+# Prints out a nice table full of your data! Now I will sell it to facebook!
 
 #print(mixed)
+# prints out the raw array of information sent through tabulate
 
 time.sleep(10000)
 # So the window doesnt dissappear right away
