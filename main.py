@@ -44,8 +44,16 @@ soup = BeautifulSoup(r.text, features="html.parser")
 # Printing out the website data for debugging
 usrName = soup.find("input", {"type":"password"})
 psswd = soup.find("input", {"type":"text"})
+VerificationToken = soup.find("input", {"name":"__RequestVerificationToken"}).get("value")
+
+#print(VerificationToken)
+
+#exit()
+
+# Wat?
 
 payload = {
+    "__RequestVerificationToken" : VerificationToken,
     "ReturnUrl" : "/HomeAccess/Classes/Classwork",
     "SCKTY00328510CustomEnabled" : False,
     "Database" : 10,
@@ -64,6 +72,10 @@ soup = BeautifulSoup(GradeLogin.text, features="html.parser")
 # Parsing the response from the payload
 
 assignments = soup.find("iframe")
+
+#print(soup)
+
+#exit()
 
 # Finding the Location of the Grades
 
@@ -108,6 +120,8 @@ print(username, "'s grades:")
 
 print(tabulate(mixed, headers=["class", "grade"], tablefmt="pretty", colalign=("left",)))
 # Prints out a nice table full of your data! now to sell it to facebook 
+
+#print(mixed)
 
 time.sleep(10000)
 # So the window doesnt dissappear right away
