@@ -11,6 +11,8 @@ click `Download as ZIP`
 
 make sure python 3 is installed 
 
+required modules to install are in requirements.txt
+
 edit the main.py file with your credentials
 
 double click main.py to run 
