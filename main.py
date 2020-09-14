@@ -128,5 +128,8 @@ print(tabulate(mixed, headers=["class", "grade"], tablefmt="pretty", colalign=("
 #print(mixed)
 # prints out the raw array of information sent through tabulate
 
-time.sleep(10000)
-# So the window doesnt dissappear right away
+#time.sleep(10000)
+## So the window doesnt dissappear right away
+# We editing this now so that it will exit after you press enter
+H = input("Press Enter To Quit: ")
+exit()
