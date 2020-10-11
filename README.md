@@ -23,9 +23,9 @@ command \\/
 pip install -r requirements.txt
 ```
 
-edit the main.py file with your credentials
+edit the Scrape.py file with your credentials
 
-double click main.py to run 
+double click Scrape.py to run or if that doesn't work run it in the terminal in the same directory as the file with `python3 Scrape.py`
 
 -------------
 
