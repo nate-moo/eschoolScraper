@@ -10,7 +10,7 @@ Make sure you at least somewhat know what you're doing.
 # Installation:
 (Yes this does require a couple extra python modules to be installed)
 
-click `clone or download` 
+click `code` 
 
 click `Download as ZIP` 
 
@@ -23,9 +23,9 @@ command \\/
 pip install -r requirements.txt
 ```
 
-edit the Scrape.py file with your credentials
+edit the Scraper.py file with your credentials
 
-double click Scrape.py to run or if that doesn't work run it in the terminal in the same directory as the file with `python3 Scrape.py`
+double click Scraper.py to run or if that doesn't work run it in the terminal in the same directory as the file with `python3 Scraper.py`
 
 -------------
 
